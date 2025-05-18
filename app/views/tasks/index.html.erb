@@ -1,0 +1,10 @@
+<div class="max-w-xl mx-auto mt-10">
+  <h1 class="text-3xl font-bold mb-4 text-center">My Todo List</h1>
+
+  <%= render "form", task: @task %>
+
+  <div id="tasks" class="space-y-2 mt-6">
+    <%= turbo_stream_from "tasks" %>
+    <%= render @tasks %>
+  </div>
+</div>
